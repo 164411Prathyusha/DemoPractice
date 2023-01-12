@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
     
       - name: Run demo
-        uses: github/demo@v2
+        uses: ./.github/workflows/demo
         env: 
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
