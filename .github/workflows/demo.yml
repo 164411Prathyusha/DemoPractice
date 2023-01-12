@@ -2,7 +2,7 @@ name: demo
 
 on: push
 jobs:
-  updateAuthor:
+  demo:
     name: demo code base
     runs-on: ubuntu-latest
     steps: 
