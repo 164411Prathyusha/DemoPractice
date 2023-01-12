@@ -3,15 +3,15 @@ name: demo
 on: push
 
 jobs:
-  demo:
-    name: demo code base
+  build:
+    name: run demo code base using action
     runs-on: ubuntu-latest
     steps: 
       - name: checking out code
         uses: actions/checkout@v2
     
       - name: Run demo
-        uses: ./.github/workflows/demo
+        uses: ./
         env: 
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
