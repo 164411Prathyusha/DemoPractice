@@ -1,6 +1,10 @@
 name: demo 
 
-on: push
+on: 
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -8,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: checking out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
     
       - name: Run demo
         uses: ./
